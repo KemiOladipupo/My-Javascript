@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JavaScript Conditional statements</h2>
+
+    <script>
+      //  Assignment 1 - Discount Checker
+      let pizzaPrice = 10000;
+
+      if (pizzaPrice > 5000) {
+        console.log("You get a 10% discount!");
+      } else if (pizzaPrice >= 3000 && pizzaPrice <= 5000) {
+        console.log("You get a 5% discount!");
+      } else {
+        console.log("No discount, sorry!");
+      }
+
+        // Assignment 2 -Trafic Light
+      let color ="Green";
+      switch (color) {
+        case "Red":
+          console.log("Stop!");
+          break;
+        case "Yellow":
+          console.log("Get Ready!");
+          break;
+        case "Green":
+          console.log("Go!");
+          break;
+        default:
+          console.log("Invalid color");
+      }
+
+    //   Assignment 3-Exam Result
+      let score = 40;
+      (score>=70) ? console.log("Distinction"): (score>=50 && score<69) ? console.log("Pass") : console.log ("Fail");
+
+    //   Assignment 4 - Salary Checker
+      let salary = 1000000;
+
+      if (salary >= 200000) {
+        console.log ("You are well-paid!")
+      } else if (salary >= 100000 && salary <= 199999) {
+        console.log ("You're doing okay.")
+      } else {
+        console.log ("Keep pushing")
+      }
+
+    //   Assignment 5- Temperature Checker
+      let temp = 0;
+
+      if (temp > 30) {
+        console.log("It's hot outside!");
+      } else if (temp >= 15 && temp <= 30) {
+        console.log("The weather is nice.");
+      } else {
+        console.log("It's cold outside!"); }
+    </script>
+  </body>
+</html>

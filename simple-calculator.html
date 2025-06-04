@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple calculator</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            margin-top: 100px;
+        }
+
+        .container {
+            text-align: center;
+            margin: auto;
+            border: 1px solid grey;
+            border-radius: 10px;
+            width: 300px;
+            height: 350px;
+            padding: px;
+        }
+
+        .h3 {
+            font-size: 72px;
+        }
+
+        .first-number {
+            margin-top: 8px;
+            width: 250px;
+            height: 32px;
+            border: 1px, solid, lightgray;
+            border-radius: 5px;
+            padding: 5px;
+
+
+        }
+
+        .second_number {
+            margin-top: 8px;
+            width: 250px;
+            height: 32px;
+            border: 1px, solid, lightgray;
+            border-radius: 5px;
+            padding: 5px;
+
+        }
+        .firstbuttons{
+            display: block;
+            margin: 5px;
+            margin-top: 10px;
+            
+        }
+        .firstbuttons button{
+            margin-top:5px;
+            padding: 5px;
+            background-color: greenyellow;
+            color: black;
+            border-radius: 5px;
+            border:1px, solid, lightgrey;
+            height: 40px;
+            width: 100px;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3> A simple calculator</h3>
+        <div class="show" id="showResult"></div>
+        <div>
+            <input type="text" class="first-number" id="first_number" placeholder="Your first number">
+        </div>
+        <div>
+            <input type="text" class="second_number" id="second_number" placeholder="Your second number">
+        </div>
+        <div class="firstbuttons">
+            <button class="add_button" id="addButton" onclick="addMe()"> Add </button>
+
+            <button class="minus_button" id="minusButton" onclick="minusMe()"> Subtract</button>
+            <button class="divide_button" id="divideButton" onclick="divideMe()">Divide</button>
+            <button class="power_button" id="powerButton" onclick="powerButton()">Power</button>
+            <button class="clear_button" id="clearButton" onclick="clearButton()">Clear</button>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <script>
+        function addMe() {
+            let firstNumber = document.getElementById("first_number").value;
+            let secondNumber = document.getElementById("second_number").value;
+            let solution = parseInt(firstNumber) + parseInt(secondNumber);
+
+            console.log(solution);
+
+            document.getElementById("showResult").textContent = solution;
+        }
+
+        document.getElementById("minusButton").onclick = function () {
+            let firstNumber = document.getElementById("first_number").value;
+            let secondNumber = document.getElementById("second_number").value;
+
+            let answer = parseInt(firstNumber) - parseInt(secondNumber);
+
+            console.log(answer);
+
+            document.getElementById("showResult").textContent = answer;
+        }
+
+        function divideMe() {
+            let firstNumber = document.getElementById("first_number").value;
+            let secondNumber = document.getElementById("second_number").value;
+            let solveDivide = parseInt(firstNumber) / parseInt(secondNumber);
+
+            document.getElementById("showResult").textContent = solveDivide;
+            if (isCorrect(firstNumber,secondNumber)){
+                document.getElementById("showResult").textContent = "Invalid Input";
+            } else {
+                document.getElementById("showResult").textContent = solveDivide;
+            }
+
+        }
+        function isCorrect(firstNumber,secondNumber) {
+            return(parseInt(firstNumber)===0 || parseInt(secondNumber)===0);
+
+        }
+        console.log (isCorrect(0,0));
+
+
+        function powerButton() {
+            let firstNumber = document.getElementById("first_number").value;
+            let secondNumber = document.getElementById("second_number").value;
+            let powerMe = parseInt(firstNumber) ** parseInt(secondNumber);
+
+            document.getElementById("showResult").textContent = powerMe;
+
+        }
+        function clearButton(){
+            document.getElementById("showResult").textContent = " ";
+            document.getElementById("first_number").value= " ";
+            document.getElementById("second_number").value= " ";
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

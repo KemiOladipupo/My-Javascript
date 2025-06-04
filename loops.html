@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //Multiplication Table, using for loop
+        function acceptD(value) {
+            for (let i = 1; i < 13; i++) {
+                console.log(`${i} * ${value} = ${i * value}`)
+            }
+        }
+        acceptD(2);
+
+        //Printing A restaurant's daily special using while loop
+
+        function specialFood(day) {
+            while (day >= 7) {
+                console.log("Today's special : Fried Rice")
+            }
+        }
+        specialFood(3);
+
+
+        // Determining if a child has taken a turn on a Rollercoaster, using do.. while.. loop
+
+        function childTurn() {
+            do {
+                console.log("You have taken a turn before")
+            } while (childTurn >= 1);
+        }
+        childTurn(3);
+
+        //Using for.. in.. loop to display roles and names of family members
+
+        function rolePlay(husband, wife, child) {
+            let rolePlay = {
+                husband,
+                wife,
+                child,
+            };
+            for (let key in rolePlay) {
+                console.log(`${key} : ${rolePlay[key]}`)
+            };
+        }
+        rolePlay("festus", "shola", "seun");
+
+        //Using for.. of.. loop to print a list of clothes to be washed
+
+        let clothes = ["ankara", "lace", "Socks"]
+        for (cloth of clothes) {
+            console.log(cloth);
+        }
+
+        //Using for.. loop and break to stop a loop when the sixth song plays
+        function music() {
+            for (m = 1; m < 10; m++) {
+                if (m === 6) {
+                    break;
+                }
+                console.log(m)
+            }
+        }
+
+        //Using for.. loop and continue, to print a list of players, skipping the 4th and 7th player
+        for (let i = 1; i <= 10; i++) {
+            if (i === 4 || i === 7) {
+                continue;
+            }
+            console.log(i)
+
+        }
+
+        //Using a loop to print if a student passes and fails
+        function studentScore() {
+            for (let studentScore = 1; studentScore < 100; studentScore++) {
+                if (studentScore >= 40) {
+                    console.log("Pass")
+                } if (studentScore < 40) {
+                    console.log("Fail")
+                }
+                studentScore(2);
+            }
+        }
+
+        //Using for loop to print Prime numbers
+        // 
+        for (let d = 1; d <= 100; d++) {
+            for (let i = 2; i < d, i++;) {
+                if (d % i === 0) {
+                    continue;
+                }
+            }
+            console.log(d)
+        }
+        
+    </script>
+</body>
+
+</html>
